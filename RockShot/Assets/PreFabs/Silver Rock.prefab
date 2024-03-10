@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7909369365595203796}
   - component: {fileID: 7120031085696240892}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: Silver Rock
   m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 2685494911359090663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28512, y: 18.328, z: 15.014}
-  m_LocalScale: {x: 0.5018023, y: 0.5018023, z: 0.5018023}
+  m_LocalPosition: {x: -0.27651, y: 18.337, z: 15.022}
+  m_LocalScale: {x: 0.21350686, y: 0.21350686, z: 0.21350686}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab6994911aaa2b142b2f9764345ba5a9, type: 2}
+  - {fileID: 2100000, guid: ad1794e8e1019c347a740f5e2ebc6d29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

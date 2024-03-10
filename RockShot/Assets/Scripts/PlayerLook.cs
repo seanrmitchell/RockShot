@@ -33,9 +33,5 @@ public class PlayerLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRot, yRot, 0f);
 
-
-
-
-
     }
 }
