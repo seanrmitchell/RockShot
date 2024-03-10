@@ -466,7 +466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1307d63d890c784fb19eae8c41a64ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rockPreFab: {fileID: 2685494911359090663, guid: e9a9b1b2eb6c67149bd69d290679462a, type: 3}
+  rockPreFab:
+  - {fileID: 2685494911359090663, guid: e9a9b1b2eb6c67149bd69d290679462a, type: 3}
+  - {fileID: 2685494911359090663, guid: d820fe82880fc374da8d4a37faf9b83e, type: 3}
+  - {fileID: 2685494911359090663, guid: d70d216c2d6f6f74696c2d76f5d74a9e, type: 3}
   rockSpawnTime: 0.75
   spawnDimensions: {x: 30, y: 2, z: 15}
   spawnPos: {fileID: 254940049}
