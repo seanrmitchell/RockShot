@@ -28,7 +28,7 @@ public class BulletLaunch : MonoBehaviour
             // Destroys rock if ray connects with it
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity) && hit.collider.gameObject.CompareTag("Rock"))
             {
-                Destroy(hit.collider.gameObject);
+                hit.collider.GetComponent<Rock>().Shot();
             }
         }
     }
