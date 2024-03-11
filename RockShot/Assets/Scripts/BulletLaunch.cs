@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -9,6 +10,7 @@ public class BulletLaunch : MonoBehaviour
     public GameObject bulletPreFab;
     public Transform firePos;
     public AudioSource aud;
+    public ScoreDisplay sc;
 
     [SerializeField]
     private Vector3 shotHalfSize;
@@ -26,6 +28,7 @@ public class BulletLaunch : MonoBehaviour
             // Destroys rock if ray connects with it
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity) && hit.collider.gameObject.CompareTag("Rock"))
             {
+                sc.scoreCount += hit.collider.GetComponent<Rock>().scoreValue;
                 hit.collider.GetComponent<Rock>().Shot();
             }
         }

@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aud: {fileID: -429095779073626513}
+  sc: {fileID: 0}
+  scoreValue: 50
 --- !u!64 &7120031085696240892
 MeshCollider:
   m_ObjectHideFlags: 0

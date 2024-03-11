@@ -7,6 +7,7 @@ public class Rock : MonoBehaviour
 {
 
     public AudioSource aud;
+    public int scoreValue;
 
     private void OnCollisionEnter(Collision collision)
     {
