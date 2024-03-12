@@ -6,12 +6,21 @@ using UnityEngine.UI;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI finalScoreText;
+    public Timer timer;
     public int scoreCount;
 
     // Update is called once per frame
     void Update()
     {
-        text.text = scoreCount.ToString("00000000");
+        if (timer.timerTime <= 0)
+        {
+            finalScoreText.text = scoreText.text;
+        }
+        else
+        {
+            scoreText.text = scoreCount.ToString("00000000");
+        }
     }
 }

@@ -18,11 +18,10 @@ public class BulletLaunch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         // Casts ray from camera to a point correlated with mouse position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale > 0)
         {
             aud.Play();
             // Destroys rock if ray connects with it
