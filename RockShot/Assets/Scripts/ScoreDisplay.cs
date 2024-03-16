@@ -8,6 +8,7 @@ public class ScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
+    public TextMeshProUGUI highScoreText;
     public Timer timer;
     public int scoreCount;
 
@@ -17,6 +18,17 @@ public class ScoreDisplay : MonoBehaviour
         if (timer.timerTime <= 0)
         {
             finalScoreText.text = scoreText.text;
+
+            if (PlayerPrefs.GetInt("Highscore") > scoreCount)
+            {
+                highScoreText.text = PlayerPrefs.GetInt("Highscore").ToString("00000000");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("Highscore", scoreCount);
+                highScoreText.text = scoreCount.ToString("00000000");
+                highScoreText.color = Color.red;
+            }
         }
         else
         {
