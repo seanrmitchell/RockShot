@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -15,6 +16,13 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (PlayerPrefs.GetFloat("Sensitivity") > 0)
+        {
+            camSpeed = PlayerPrefs.GetFloat("Sensitivity");
+        }
+
+        Debug.Log(camSpeed);
     }
 
     // Update is called once per frame

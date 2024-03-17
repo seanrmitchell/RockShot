@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject settingsPanel, menuPanel;
+
     public void Play()
     {
         Time.timeScale = 1f;
@@ -15,6 +18,12 @@ public class Menu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Settings()
+    {
+        settingsPanel.SetActive(true);
+        menuPanel.SetActive(false);
     }
 
     public void Quit()
