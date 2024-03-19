@@ -17,12 +17,11 @@ public class PlayerLook : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
 
+        // Finds sensitivity in the local save data
         if (PlayerPrefs.GetFloat("Sensitivity") > 0)
         {
             camSpeed = PlayerPrefs.GetFloat("Sensitivity");
         }
-
-        Debug.Log(camSpeed);
     }
 
     // Update is called once per frame

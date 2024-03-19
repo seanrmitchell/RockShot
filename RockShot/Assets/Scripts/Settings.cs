@@ -12,6 +12,11 @@ public class Settings : MonoBehaviour
     [SerializeField]
     private GameObject mainPanel, settingsPanel;
 
+    private void Start()
+    {
+        slider.value = PlayerPrefs.GetFloat("Sensitivity");
+    }
+
     private void Update()
     {
         senseText.text = slider.value.ToString();
@@ -20,7 +25,6 @@ public class Settings : MonoBehaviour
     public void SensitivityChange()
     {
         PlayerPrefs.SetFloat("Sensitivity", slider.value);
-        Debug.Log(PlayerPrefs.GetFloat("Sensitivity"));
         mainPanel.SetActive(true);
         settingsPanel.SetActive(false);
     }
